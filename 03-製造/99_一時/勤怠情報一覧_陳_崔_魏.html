@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/Users/Wen/.vscode/extensions/1HTML.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title _msthash="149916" _msttexthash="4599868">勤怠情報一覧.</title>
+  
+		<style>
+
+      button{
+        background-color: #0e0b0b; 
+        margin-top: 50px;
+        margin-left: 800px;
+        color: #0dc1dd;
+        width:130px;
+        height: 50px;
+
+      }
+      .btn:hover {
+            border-radius: 5px;
+            color: #fff;
+            background: #d8dddd;
+            box-shadow: 0 0 5px 0 rgb(199, 199, 207),
+                0 0 25px 0 #10e9e9,
+                0 0 50px 0 #13b8b8,
+                0 0 100px 0 #18d4d4;
+            transition: all 1s linear;
+        }
+      body {
+            height: 100vh;
+            background: linear-gradient(#8e9dbd, #d6d6d8);
+
+            align-items: center;
+            font-size: 16px;
+            color: #07060f;
+            background-image:url('https://img2.baidu.com/it/u=1115813146,1264347530&fm=253&fmt=auto&app=138&f=JPEG?w=626&h=500');
+        }
+ 
+	  table{
+				width: 900px;
+				margin: auto;
+				border: black 1px  solid;
+				border-spacing: 0px;
+				border-collapse: collapse;
+                margin-top: 20px;
+				 table-layout:fixed;
+				
+			}
+ 
+			th{
+                background: #8ce6e6;
+               
+				border: black 1px  solid;
+				
+			}
+			td{
+				border: black 1px  solid;
+                overflow:hidden;
+				 text-overflow:ellipsis;
+			}
+			
+		</style>
+
+
+ </head>
+ <body>
+        <div>
+          <button class="btn" type="submit" value="Submit" action="#">ログアウト</button>
+        </div>
+      <h1 _msthash="135720" _msttexthash="18440162">勤怠情報システム</h1>
+
+          <span>社員ID</span>  <span>**</span> <br><br>
+         <span>氏名　</span>  <span>**</span>  <br><br>
+         <span>所属部門　</body>   <span>**</span> <br><br>
+		 
+    <form name="reg_testdate">
+      <select name="YYYY" onchange="YYYYDD(this.value)">
+        <option value=""></option>
+      </select>
+      <select name="MM" onchange="MMDD(this.value)">
+        <option value=""></option>
+      </select>
+    </form>
+<script language="JavaScript">  
+  function YYYYMMDDstart()   
+  {   
+          MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];   
+   
+         
+          var y  = new Date().getFullYear();   
+          for (var i = (y-50); i < (y+5); i++) 
+                  document.reg_testdate.YYYY.options.add(new Option(" "+ i +" 年", i));   
+   
+          
+          for (var i = 1; i < 13; i++)   
+                  document.reg_testdate.MM.options.add(new Option(" " + i + " 月", i));   
+   
+          document.reg_testdate.YYYY.value = y;   
+          document.reg_testdate.MM.value = new Date().getMonth() + 1;   
+          var n = MonHead[new Date().getMonth()];   
+          if (new Date().getMonth() ==1 && IsPinYear(YYYYvalue)) n++;   
+               writeDay(n);
+          document.reg_testdate.DD.value = new Date().getDate();   
+  }   
+  if(document.attachEvent)   
+      window.attachEvent("onload", YYYYMMDDstart);   
+  else   
+      window.addEventListener('load', YYYYMMDDstart, false);   
+  function YYYYDD(str)
+  {   
+          var MMvalue = document.reg_testdate.MM.options[document.reg_testdate.MM.selectedIndex].value;   
+          if (MMvalue == ""){ var e = document.reg_testdate.DD; optionsClear(e); return;}   
+          var n = MonHead[MMvalue - 1];   
+          if (MMvalue ==2 && IsPinYear(str)) n++;   
+               writeDay(n)   
+  }   
+  function MMDD(str)  
+  {   
+       var YYYYvalue = document.reg_testdate.YYYY.options[document.reg_testdate.YYYY.selectedIndex].value;   
+       if (YYYYvalue == ""){ var e = document.reg_testdate.DD; optionsClear(e); return;}   
+       var n = MonHead[str - 1];   
+       if (str ==2 && IsPinYear(YYYYvalue)) n++;   
+      writeDay(n)   
+  }   
+
+  function IsPinYear(year)
+  {     return(0 == year%4 && (year%100 !=0 || year%400 == 0));}   
+  function optionsClear(e)   
+  {   
+       e.options.length = 1;   
+  }   
+  //--></script>
+
+      <div>
+        <table border="1" cellspacing="0" cellpadding="10" width="2">
+        
+        <tr align="center" >
+            <th>月</th>
+            <th>営業日数</th>
+            <th>出勤日数</th>
+            <th>欠勤日数</th>
+            <th>実働時間</th>
+            <th>残業時間</th>
+
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+      
+ 
+     </table>
+</div>
+</body>
+</html>
