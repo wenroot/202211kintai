@@ -1,0 +1,53 @@
+@charset "UTF-8";
+* {
+  text-align: center;
+  
+	 
+}
+div.main {
+margin: 50vh auto 0;
+	transform: translateY(-50%);
+
+ 
+}
+.outer{
+  height: 25px;
+  text-align: center;
+}
+
+div.error {
+	
+  position:relative;
+
+ 
+}
+input {
+	margin-top:15px;
+	margin-bottom:15px;
+	font-size:22px;
+	height:22px;
+}
+#submit{
+	position:relative;
+	left:200px;
+	font-size:15px;
+	height:26px;
+	width:70px;
+}
+#return{
+	
+	position:relative;
+	left:250px;
+	font-size:15px;
+	height:26px;
+	width:70px;
+	
+}
+select{
+	position:relative;
+	margin-top:15px;
+	margin-bottom:15px;
+	font-size:22px;
+	width:200px;
+	height:22px;
+}

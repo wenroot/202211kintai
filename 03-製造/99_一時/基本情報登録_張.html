@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>基本情報登録</title>
+
+</head>
+<link href="基本情報登録_張.css" rel="stylesheet" type="text/css" />
+
+<body>
+<div class="main">
+<form action="">
+
+<label>社員ID</label>
+<input type="text" id="empolyee_id" name="employee_id">  <br>
+
+
+<label>氏名</label>
+<input type="text" id="empolyee_name" name="employee_name" maxlength=20;> <br>
+<label>入社年月日</label>
+<input type="date" id="nyusha_date" name="nyusha_date" "> <br>
+<label>性別</label>
+ <input type="radio" id="sex1" name="sex" value="male">
+  <label for="sex1">男</label>
+   <input type="radio" id="sex2" name="sex" value="female">
+  <label for="sex2">女</label>
+     <input type="radio" id="sex3" name="sex" value="unknown">
+  <label for="sex3">不明</label><br>
+  <label>所属部門</label>
+   <select name="dept" id="dept">
+    <option value="">null</option>
+    <option value="a">a</option>
+    <option value="b">b</option>
+    <option value="c">c</option>
+    <option value="d">d</option>
+  </select><br>
+  <label>生年月日</label>
+<input type="date" id="DOB" name="DOB" > <br>
+   <label>メールアドレス</label>
+  <input  type="email" id="email" name="email" maxlength=50;> <br>
+   
+   <input type="submit" id="submit" value="登録"><input type="submit" id="return" value="戻る">
+</form>
+</div>
+<div class="error">
+<form>
+<label></label>
+
+</form>
+</div>
+</body>
+</html>
