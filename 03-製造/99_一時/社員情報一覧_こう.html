@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社員情報一覧</title>
+    <link rel="stylesheet" type="text/css" href="社員情報一覧.css">
+</head>
+
+<body>
+    <form action="">
+        <div>
+            <table>
+                <tr>
+                    <td>社員ID</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>入社年月日</td>
+                    <td><input type="date">～<input type="date"></td>
+                </tr>
+                <tr>
+                    <td>所属</td>
+                    <td><select name="address" size="1">
+                            <option></option>
+                            <option value="営業部">営業部</option>
+                            <option value="エンジニア部">エンジニア部</option>
+                            <option value="人事部">人事部</option>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" class="box" value="検索">
+            <input type="submit" class="box" value="削除">
+            <input type="submit" class="box" value="追加"><br>
+            <input type="submit" class="box" value="ログアウト"><br>
+            <table border="1">
+                <h6>
+                    <tr>
+                        <th>選択</th>
+                        <th>社員ID</th>
+                        <th>入社年月日</th>
+                        <th>氏名</th>
+                        <th>性別</th>
+                        <th>生年月日</th>
+                        <th>所属</th>
+                        <th>メールアドレス</th>
+                    </tr>
+                    <tr class="text">
+                        <td><input type="checkbox"></td>
+                        <td>00</td>
+                        <td>0000/00/00</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>0000/00/00</td>
+                        <td>00</td>
+                        <td>fjksdpofkdops@gmail.com</td>
+                    </tr>
+                </h6>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>
