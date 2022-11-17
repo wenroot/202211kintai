@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="syousai.css">
+<title>勤怠情報詳細</title>
+</head>
+<body>
+	<h1>勤怠情報詳細</h1>
+	社員ID<input id="id" type="text" name="ID" value="<%= request.getParameter("EMPLOYEE_ID") %>" disabled><br/>
+	氏名<input id="name" type="text" name="name" value="<%= request.getParameter("EMPLOYEE_NAME") %>" disabled><br/>
+	所属部門<input id="dept" type="text" name="dept" value="<%= request.getParameter("DEPT_ID") %>" disabled><br/>
+	<input id="create" type="submit" value="作成">
+	<input id="return" type="submit" value="戻る">
+<form action="/aaa" method="post">
+<div>
+<table id="attendance" border="1">
+<tr>
+	<th id="check">選択</th>
+	<th id="day">日付</th>
+	<th id="start">作業開始時間</th>
+	<th id="end">作業終了時間</th>
+	<th id="rest">休憩時間</th>
+	<th id="work">実働時間</th>
+	<th id="over">残業時間</th>
+	<th id="status">勤務状態</th>
+	<th id="remark">作業内容</th>
+	<th id="ud">編集</th>
+</tr>
+<tr id="data"><td><input type="checkbox"></td>
+<td><input type="hidden" name="ATTENDANCE_DATE" value="${T_ATTENDANCE.ATTENDANCE_DATE}">${T_ATTENDANCE.ATTENDANCE_DATE}</td>
+<td><input type="hidden" name="START_TIME" value="${T_ATTENDANCE.START_TIME}">${T_ATTENDANCE.START_TIME}</td>
+<td><input type="hidden" name="END_TIME" value="${T_ATTENDANCE.END_TIME}">${T_ATTENDANCE.END_TIME}</td>
+<td><input type="hidden" name="REST_HOURS" value="${T_ATTENDANCE.REST_HOURS}">${T_ATTENDANCE.REST_HOURS}</td>
+<td><input type="hidden" name="WORKING_HOURS" value="${T_ATTENDANCE.WORKING_HOURS}">${T_ATTENDANCE.WORKING_HOURS}</td>
+<td><input type="hidden" name="OVERTIME_HOURS" value="${T_ATTENDANCE.OVERTIME_HOURS}">${T_ATTENDANCE.OVERTIME_HOURS}</td>
+<td><input type="hidden" name="STATUS_ID" value="${T_ATTENDANCE.STATUS_ID}">${T_ATTENDANCE.STATUS_ID}</td>
+<td><input type="hidden" name="REMARKS" value="${T_ATTENDANCE.REMARKS}">${T_ATTENDANCE.REMARKS}</td>
+<td><input type="submit" name="update" value="編集"></td></tr>
+</table>
+</div>
+</form>
+	<input id="delete" type="submit" value="削除">
+</body>
+</html>
